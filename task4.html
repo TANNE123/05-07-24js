@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .main{
+            width: 290px;
+            height: 600px;
+            border: 2px solid;
+            text-align: center;
+        }
+        img{
+            width: 250px;
+            height: 200px;
+            padding: 20px;
+        }
+        .content{
+            text-align: justify;
+            padding: 10px;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img class="img-1">
+        <h2 class="title"></h2>
+        <p class="content"></p>
+        <button class="btn"></button>
+    </div>
+    <script>
+        let proc_1=JSON.parse(localStorage.getItem('product'))
+        let main=document.querySelector(".main")
+
+        let img=document.querySelector(".img-1")
+        img.src=proc_1.image
+
+        let title=document.querySelector(".title")
+        title.innerHTML=proc_1.title
+
+        let content=document.querySelector(".content")
+        content.innerHTML=proc_1.description
+
+        let btn=document.querySelector(".btn")
+        btn.innerHTML="BUY"
+
+
+
+    </script>
+</body>
+</html>
